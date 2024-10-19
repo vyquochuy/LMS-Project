@@ -10,7 +10,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to right, #4ebcf5, #9e19d0);
     background: linear-gradient(to bottom right, #4ebcf5, #9e19d0);
 }
 
