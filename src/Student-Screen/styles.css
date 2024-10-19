@@ -8,6 +8,7 @@ body {
     font-family: Arial;
     margin: 0;
     padding-top: 80px;
+    background-color: #f3e5f5;
 }
 
 /* Header Bar Styles */
@@ -39,18 +40,23 @@ body {
     height: 80px;
 }
 
-/* Notifications Icon Styles */
-.notifications img {
-    height: 40px;
-    cursor: pointer;
+/* Notifications and Profile Container Styles */
+.Items {
+    display: flex;
+    align-items: center;
+
+    img {
+        height: auto;
+        cursor: pointer;
+        margin-right: 20px;
+        /* Add some space between notifications and profile */
+    }
 }
 
-/* Content Styles */
-.content {
-    padding: 20px;
-}
+/* Side bar styles */
 .left-sidebar {
     width: 250px;
+    min-width: 108px;
     height: 100vh;
     background-color: #ffffff;
     padding: 30px;
@@ -70,10 +76,21 @@ body {
         width: 175px;
     }
 }
+@media (max-width: 768px) {
+    .left-sidebar {
+        width: 108px;
+    }
+    .menu-items p {
+        opacity: 0;
+        visibility: hidden;
+        font-size: 1;
+    }
+}
 
 .menu-items {
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
 
 .menu-items div {
@@ -82,18 +99,18 @@ body {
     padding: 10px;
     cursor: pointer;
     border-radius: 40px;
-    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, width 0.3s ease,
+        height 0.3s ease, background-color 0.3s ease;
     text-align: center;
     margin-bottom: 10px;
 }
-
 
 .menu-items .home {
     background: linear-gradient(to right, #4ebcf5, #9e19d0);
     background: linear-gradient(to bottom right, #4ebcf5, #9e19d0);
     color: white;
     font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 4px 10px #9f82d1;
 }
 
 .menu-items div:hover {
@@ -105,4 +122,39 @@ body {
     width: 24px;
     height: 24px;
     margin-right: 10px;
+}
+
+.menu-items p {
+    font-size: 16px;
+}
+
+/* Main content styles */
+.main-content {
+    margin-left: 270px; /* 250px (sidebar width) + 20px */
+    margin-right: 20px;
+    margin-top: 30px;
+    padding: 20px;
+    height: 100vh;
+    transition: margin-left 0.3s ease;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
+    .main-content {
+        margin-left: 220px; /* 200px (sidebar width) + 20px */
+    }
+}
+
+@media (max-width: 992px) {
+    .main-content {
+        margin-left: 195px; /* 175px (sidebar width) + 20px */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 128px; /* 108px (sidebar width) + 20px */
+    }
 }
