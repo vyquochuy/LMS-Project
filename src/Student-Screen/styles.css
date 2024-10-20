@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +6,7 @@
 }
 
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding-top: 80px;
     background-color: #f3e5f5;
@@ -38,6 +39,8 @@ body {
 /* Logo Styles */
 .logo img {
     height: 80px;
+    cursor: pointer;
+    margin-left: 20px;
 }
 
 /* Notifications and Profile Container Styles */
@@ -49,7 +52,6 @@ body {
         height: auto;
         cursor: pointer;
         margin-right: 20px;
-        /* Add some space between notifications and profile */
     }
 }
 
@@ -69,6 +71,8 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    padding: 10px;
+    margin-left: 10px;
 }
 
 .menu-items div {
@@ -77,8 +81,7 @@ body {
     padding: 10px;
     cursor: pointer;
     border-radius: 20px;
-    transition: transform 0.3s ease, width 0.3s ease,
-        height 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, width 0.3s ease,height 0.3s ease, background-color 0.3s ease;
     text-align: center;
     margin-bottom: 10px;
     max-height: 50px;
@@ -109,9 +112,7 @@ body {
 
 /* Main content styles */
 .main-content {
-    margin-left: 380px;
-    margin-right: 20px;
-    margin-top: 30px;
+    margin: 30px 20px 0 380px;
     padding: 20px;
     height: 100vh;
     transition: margin-left 0.3s ease;
@@ -150,6 +151,6 @@ body {
     .menu-items p {
         opacity: 0;
         visibility: hidden;
-        font-size: 1;
+        font-size: 0;
     }
 }
