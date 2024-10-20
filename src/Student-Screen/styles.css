@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +13,7 @@ body {
     background-color: #f3e5f5;
 }
 
-/* Header Bar Styles */
+/* Header Bar */
 .top-bar {
     position: fixed;
     top: 0;
@@ -28,7 +29,6 @@ body {
     z-index: 1000;
 }
 
-/* Container to align items */
 .top-bar .container {
     display: flex;
     justify-content: space-between;
@@ -36,14 +36,12 @@ body {
     width: 100%;
 }
 
-/* Logo Styles */
 .logo img {
     height: 80px;
     cursor: pointer;
     margin-left: 20px;
 }
 
-/* Notifications and Profile Container Styles */
 .Items {
     display: flex;
     align-items: center;
@@ -54,6 +52,8 @@ body {
         margin-right: 20px;
     }
 }
+
+
 
 /* Side bar styles */
 .left-sidebar {
@@ -71,8 +71,6 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    padding: 10px;
-    margin-left: 10px;
 }
 
 .menu-items div {
@@ -80,11 +78,10 @@ body {
     align-items: center;
     padding: 10px;
     cursor: pointer;
-    border-radius: 20px;
-    transition: transform 0.3s ease, width 0.3s ease,height 0.3s ease, background-color 0.3s ease;
+    border-radius: 15px;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
     text-align: center;
-    margin-bottom: 10px;
-    max-height: 50px;
+    margin-bottom: 15px;
 }
 
 .menu-items .home {
@@ -101,9 +98,11 @@ body {
 }
 
 .menu-items img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    margin-right:  10px;
+    margin-left: -2px;
+    align-items: center;
 }
 
 .menu-items p {
@@ -126,6 +125,7 @@ body {
     .left-sidebar {
         width: 200px;
     }
+
     .main-content {
         margin-left: 220px;
     }
@@ -135,22 +135,34 @@ body {
     .left-sidebar {
         width: 175px;
     }
+
     .main-content {
         margin-left: 195px;
     }
 }
 
+
+
 @media (max-width: 768px) {
     .left-sidebar {
         width: 108px;
+
+        .menu-items div {
+            background-color: #ececff;
+        }
+
+        .menu-items p {
+            display: none;
+
+        }
     }
+
+    .top-bar p {
+        display: none;
+    }
+
     .main-content {
         margin-left: 128px;
     }
 
-    .menu-items p {
-        opacity: 0;
-        visibility: hidden;
-        font-size: 0;
-    }
 }
